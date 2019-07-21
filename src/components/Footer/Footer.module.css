@@ -1,5 +1,5 @@
 @value colors: "../../assets/styles/variables.css";
-@value black, cerulean, atlantis, white, gris from colors;
+@value black, cerulean, atlantis, white, grey from colors;
 
 .footer{
     padding: 80px 5% 40px 5%;

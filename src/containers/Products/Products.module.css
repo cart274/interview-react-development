@@ -1,5 +1,5 @@
 @value colors: "../../assets/styles/variables.css";
-@value black, cerulean, atlantis gris from colors;
+@value black, cerulean, atlantis grey from colors;
 
 .products{
     padding: 80px 5%

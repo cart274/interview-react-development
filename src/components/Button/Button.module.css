@@ -1,5 +1,5 @@
 @value colors: "../../assets/styles/variables.css";
-@value black, cerulean, atlantis, white, gris from colors;
+@value black, cerulean, atlantis, white, grey from colors;
 
 .button, .button:active, .button:focus{
     border: none;
@@ -25,4 +25,8 @@
 }
 .button.tertiary{
     color: cerulean;    
+}
+.button.disabled, .button.disabled:active, .button.disabled:focus{
+    background-color: darkGrey;
+    cursor: default;
 }

@@ -1,5 +1,5 @@
 @value colors: "../../assets/styles/variables.css";
-@value black, cerulean, atlantis, gris, white from colors;
+@value black, cerulean, atlantis, grey, white from colors;
 
 .requirements{
     display: flex;

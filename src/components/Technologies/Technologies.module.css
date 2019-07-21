@@ -1,5 +1,5 @@
 @value colors: "../../assets/styles/variables.css";
-@value black, cerulean, atlantis, gris, white from colors;
+@value black, cerulean, atlantis, grey, white from colors;
 
 .technologies{
     display: flex;
@@ -73,7 +73,7 @@
     display: flex;
     text-align: center;
     align-items: center;
-    background-color: gris;
+    background-color: grey;
     justify-content: center;
     margin-top: 80px;
 }
