@@ -1,0 +1,37 @@
+@value colors: "../../assets/styles/variables.css";
+@value black, cerulean, atlantis from colors;
+
+.welcome{
+    display: flex;
+    height: 86vh;
+    padding: 0 5%;
+}
+.welcome div{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.welcome h1{
+    font-size: 40px;
+}
+.welcome h1 strong{
+    font-weight: 700;
+}
+.welcome h1 strong::before {
+    content: '\a';
+    white-space: pre;
+}
+.welcome h1 span{
+    color: atlantis;
+    font-weight: 700;
+}
+.welcome h1 span::before {
+    content: '\a';
+    white-space: pre;
+}
+.welcome img{
+    height: 80%;
+    display: block;
+    margin-left: 20%;
+}
+

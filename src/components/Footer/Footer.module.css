@@ -1,0 +1,30 @@
+@value colors: "../../assets/styles/variables.css";
+@value black, cerulean, atlantis, white, gris from colors;
+
+.footer{
+    padding: 80px 5% 40px 5%;
+    text-align: center;
+    background-image: url('../../assets/images/backgrounds/Bg_Footer.png')
+}
+.footer h2{
+    text-align: center;
+    font-size: 46px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.footer h2 span{
+    color: cerulean;
+    font-weight: 600;
+}
+.footer h3{
+    text-align: center;
+    font-size: 34px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.footer button{
+    margin: 0 auto 120px auto;
+}
+.footer img{
+    text-align: center;
+}

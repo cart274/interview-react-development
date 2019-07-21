@@ -1,0 +1,52 @@
+@value colors: "../../assets/styles/variables.css";
+@value black, cerulean, atlantis, white, gris from colors;
+
+.benefits{
+    padding: 80px 5%;
+}
+.benefits h2{
+    text-align: center;
+    font-size: 34px;
+    font-weight: 500;
+    margin-bottom: 80px;
+}
+.benefits h2 span{
+    color: cerulean;
+    font-size: 34px;
+    font-weight: 500;
+}
+.benefits ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.benefits ul li{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    width: 14%;
+    padding-top: 140px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size:60%;
+}
+.benefits ul li:nth-child(1){
+    background-image: url('../../assets/images/icons/Ic_Hour.svg')
+}
+.benefits ul li:nth-child(2){
+    background-image: url('../../assets/images/icons/Ic_HomeOffice.svg')
+}
+.benefits ul li:nth-child(3){
+    background-image: url('../../assets/images/icons/Ic_Workshops.svg')
+}
+.benefits ul li:nth-child(4){
+    background-image: url('../../assets/images/icons/Ic_DrinkSnacks.svg')
+}
+.benefits ul li:nth-child(5){
+    background-image: url('../../assets/images/icons/Ic_laptop.svg')
+}
+.benefits ul li:nth-child(6){
+    background-image: url('../../assets/images/icons/Ic_brain.svg')
+}

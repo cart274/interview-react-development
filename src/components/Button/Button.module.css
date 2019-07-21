@@ -1,0 +1,24 @@
+@value colors: "../../assets/styles/variables.css";
+@value black, cerulean, atlantis, white, gris from colors;
+
+.button, .button:active, .button:focus{
+    border: none;
+    padding: 15px 0px;
+    border-radius: 30px;
+    width: 250px;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    font-weight: 600;
+}
+.button.primary, .button.primary:active, .button.primary:focus{
+    background-color: cerulean;
+}
+.button.secondary, .button.secondary:active, .button.secondary:focus{
+    background-color: transparent;
+    border: 2px solid cerulean;    
+}

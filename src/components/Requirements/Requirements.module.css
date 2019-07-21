@@ -1,0 +1,52 @@
+@value colors: "../../assets/styles/variables.css";
+@value black, cerulean, atlantis, gris, white from colors;
+
+.requirements{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 80px 5%;
+}
+.requirements div{
+    width: 50%;
+}
+.requirements div h2{
+    font-size: 30px;
+    max-width: 360px;
+    font-size: 32px;
+    font-weight: 800;
+    margin-left: 40px;
+}
+.requirements div ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.requirements div ul li{
+    font-size: 30px;
+    max-width: 560px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0 0 40px 50px;
+    position: relative;
+}
+.requirements div ul li::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: -40px;
+    top: calc(50% - 27px);
+}
+.requirements div ul li:nth-child(1)::before{
+    background-color: atlantis;
+}
+.requirements div ul li:nth-child(2)::before{
+    background-color: black;
+}
+.requirements div ul li:nth-child(3)::before{
+    background-color: cerulean;
+}
