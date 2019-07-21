@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom"
 import styles from "./Header.module.css";
 import logo from "../../assets/images/images/logo_full_color.svg"
 
@@ -11,9 +12,9 @@ class Header extends Component {
         <nav>
           <ul>
             <li>
-              <a href="#">
+              <Link to="/">
                 <img src={logo} />
-              </a>
+              </Link>
             </li>
             <li>
               <a href="#welcome">Inicio</a>
@@ -28,7 +29,7 @@ class Header extends Component {
               <a href="#requirements">Requerimientos</a>
             </li>
             <li>
-              <a href="#">Login</a>
+              <Link to="/login">Login</Link>
             </li>
           </ul>
         </nav>

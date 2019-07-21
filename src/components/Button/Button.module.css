@@ -18,7 +18,11 @@
 .button.primary, .button.primary:active, .button.primary:focus{
     background-color: cerulean;
 }
-.button.secondary, .button.secondary:active, .button.secondary:focus{
+.button.secondary, .button.secondary:active, .button.secondary:focus, 
+.button.tertiary, .button.tertiary:active, .button.tertiary:focus{
     background-color: transparent;
     border: 2px solid cerulean;    
+}
+.button.tertiary{
+    color: cerulean;    
 }

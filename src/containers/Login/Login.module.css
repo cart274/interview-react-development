@@ -1,0 +1,83 @@
+@value colors: "../../assets/styles/variables.css";
+@value black, cerulean, atlantis from colors;
+
+.login{
+    padding: 80px 5%
+}
+.login h1{
+    text-align: center;
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: atlantis;
+}
+.login form{
+    display: flex;
+    flex-wrap: wrap;
+}
+.leftLogin{
+    width: 50%;
+    padding-right: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.leftLogin label{
+    display: block;
+    padding: 30px 0 20px;
+    font-size: 24px;
+    width: 200px;
+    text-align: left;
+    font-weight: 500
+
+}
+.leftLogin input, .rightLogin input{
+    width: 200px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid cerulean;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.rightLogin{
+    width: 50%;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+.rightLogin label{
+    display: block;
+    padding: 30px 0 20px;
+    font-size: 24px;
+    font-weight: 500
+}
+.rightLogin select{
+    width: 200px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid cerulean;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.termsLogin{
+    padding: 60px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+.termsLogin span{
+    color: cerulean;
+    font-weight: 600;
+}
+.termsLogin input[type='checkbox']{
+    border: 1px solid cerulean;
+    margin-right: 10px;
+}
+.btnGroup{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.btnGroup .button.secondary{
+    color: cerulean;
+}
