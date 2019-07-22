@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from '../../components/Button/Button';
 import style from './Login.module.css'
-
+import request from '../../utils/request'
 
 class Login extends Component {
 
@@ -25,7 +25,6 @@ class Login extends Component {
     for(let year= 18; year<= 100; year++){
       ageList.push({text: year, value: year})
     }
-
     this.setState({ageList});
   }
 
@@ -82,9 +81,13 @@ class Login extends Component {
     return re.test(String(email).toLowerCase());
   }
 
-  send(e){
+  async send(e){
     e.preventDefault();
+    let {name, lastname, email, age} = this.state,
+    data = {name, lastname, email, age};
     console.log("send");
+    await request('post', 'sign_in', data)
+    debugger;
   }
 
   render() {

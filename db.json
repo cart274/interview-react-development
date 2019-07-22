@@ -1,5 +1,13 @@
 {
-  "sign_in": [],
+  "sign_in": [
+    {
+      "name": "iraima rodriguez",
+      "lastname": "rodriguez",
+      "email": "carolrodriguezt@gmail.com",
+      "age": "24",
+      "id": 1
+    }
+  ],
   "products": [
     {
       "id": 1,
