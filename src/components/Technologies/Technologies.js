@@ -11,7 +11,7 @@ class Technologies extends Component {
           <h2>Estamos buscando para incorporar gente increíble para estas tecnologías:</h2>
         </div>
         <div className={techStyle.techIcons}>
-          <img src={icons} />
+          <img src={icons} alt="Technologies" />
         </div>
         <div className={techStyle.woloxers}>
           <h2>350 + <span>Woloxers</span></h2>

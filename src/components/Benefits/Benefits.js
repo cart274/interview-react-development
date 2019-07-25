@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import benefitsStyle from "./Benefits.module.css";
-import Button from "../Button/Button";
-
 
 class Benefits extends Component {
   render() {
     return (
-      <section className={benefitsStyle.benefits} ref="benefits">
+      <section className={benefitsStyle.benefits} id="benefits">
         <h2>Entre los beneficios que ofrecemos se encuentran <span>;)</span></h2>
         <ul>
           <li>Flexibilidad Horaria</li>

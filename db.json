@@ -6,6 +6,41 @@
       "email": "carolrodriguezt@gmail.com",
       "age": "24",
       "id": 1
+    },
+    {
+      "name": "iraima rodriguez",
+      "lastname": "rodriguez",
+      "email": "carolrodriguezt@gmail.com",
+      "age": "29",
+      "id": 2
+    },
+    {
+      "name": "carlos",
+      "lastname": "Rodríguez",
+      "email": "cart274@gmail.com",
+      "age": "31",
+      "id": 3
+    },
+    {
+      "name": "iraima rodriguez",
+      "lastname": "rodriguez",
+      "email": "carolrodriguezt@gmail.com",
+      "age": "29",
+      "id": 4
+    },
+    {
+      "name": "Carlos",
+      "lastname": "Rodríguez",
+      "email": "carolrodriguezt@gmail.com",
+      "age": "31",
+      "id": 5
+    },
+    {
+      "name": "Carlls",
+      "lastname": "Roddef",
+      "email": "caerte@asd.com",
+      "age": "27",
+      "id": 6
     }
   ],
   "products": [

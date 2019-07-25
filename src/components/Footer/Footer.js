@@ -10,7 +10,7 @@ class Footer extends Component {
         <h2>Gracias por  <span> completar el ejercicio</span></h2>
         <h3>Te invitamos a ver mas información</h3>
         <Button btnType="primary" text="Conocer más"></Button>
-        <img src={logoFooter} />
+        <img src={logoFooter} alt="Footer"/>
       </section>
     );
   }

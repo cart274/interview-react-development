@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Button from '../../components/Button/Button';
 import style from './Login.module.css'
 import request from '../../utils/request'
+import {setLoader} from '../../state/actions'
+import { connect } from 'react-redux';
 
 class Login extends Component {
 
@@ -67,7 +69,7 @@ class Login extends Component {
     let {name, lastname, email, age, isValid, terms} = this.state,
     validated = false;
 
-    if(name && lastname && email && age && terms && this.validateEmail(email) ){
+    if(name && name.trim() && lastname && lastname.trim() && email && age && terms && this.validateEmail(email) ){
       if(email)
         validated = true;
     }
@@ -83,11 +85,12 @@ class Login extends Component {
 
   async send(e){
     e.preventDefault();
+    this.props.setLoader(true);
     let {name, lastname, email, age} = this.state,
     data = {name, lastname, email, age};
-    console.log("send");
     await request('post', 'sign_in', data)
-    debugger;
+    this.props.setLoader(false);
+    this.props.history.push(`/products`)
   }
 
   render() {
@@ -120,7 +123,7 @@ class Login extends Component {
             <label for="terms">Acepto los términos y condiciones</label>
           </div>
           <div className={style.btnGroup}>
-            <Button text="Cancelar" btnType="tertiary"></Button>
+            <Button text="Cancelar" btnType="tertiary" onClick={(e)=> this.props.history.push(`/`)}></Button>
             <Button text="Entrar" btnType="primary" disabled={!isValid} onClick={(e)=> this.send(e)}></Button>
           </div>
         </form>
@@ -129,4 +132,8 @@ class Login extends Component {
   }
 }
 
-export default Login;
+const mapDispatchToProps = dispatch => ({
+  setLoader: (items)=>dispatch(setLoader(items))
+})
+
+export default connect(undefined, mapDispatchToProps)(Login);

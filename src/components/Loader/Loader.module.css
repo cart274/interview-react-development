@@ -1,0 +1,26 @@
+@value colors: "../../assets/styles/variables.css";
+@value black, cerulean, atlantis, white, grey, darkGrey from colors;
+
+.loader{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: darkgrey;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    flex-direction: column;
+}
+.loader img{
+    width: 100px;
+}
+.loader h4{
+    font-weight: 600;
+    color: black;
+}
+.loader.show{
+    display: flex;
+}

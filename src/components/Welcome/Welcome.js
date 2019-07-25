@@ -13,7 +13,7 @@ class Welcome extends Component {
           </h1>
         </div>
         <div>
-          <img src={slide} />
+          <img src={slide} alt="Wolox"/>
         </div>
       </section>
     );

@@ -32,7 +32,7 @@ class Products extends Component {
           {
             Array.isArray(products) && products.map( ({ id = 0, sku = '', name = '', price = 0}, key) =>{
             return <article key={key}>
-                    <img src=""/>
+                    <img src="" alt={name}/>
                     <header>
                       <h3>{name}</h3>
                       <p>Descripción {sku}</p>
@@ -43,7 +43,7 @@ class Products extends Component {
             })
           }
           <article>
-            <img src=""/>
+            <img src="" alt="Products"/>
             <header>
               <h3>Nombre</h3>
               <p>Descripción</p>
@@ -51,7 +51,7 @@ class Products extends Component {
             </header>
           </article>
           <article>
-            <img src=""/>
+            <img src="" alt="Products"/>
             <header>
               <h3>Nombre</h3>
               <p>Descripción</p>
@@ -59,7 +59,7 @@ class Products extends Component {
             </header>
           </article>
           <article>
-            <img src=""/>
+            <img src="" alt="Products"/>
             <header>
               <h3>Nombre</h3>
               <p>Descripción</p>
