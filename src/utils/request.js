@@ -1,5 +1,14 @@
 const axios = require('axios');
 
+/**
+ * @desc Request genérico para consultar apis
+ * 
+ * @param {String} method // (get o post)
+ * @param {String} url // /products
+ * @param {Object} data // opcional
+ * 
+ * @return {object} Respuesta de la api
+ */
 const request = async ( method, url, data) =>{
     try{
         if(method === 'post'){
@@ -7,10 +16,8 @@ const request = async ( method, url, data) =>{
         }
 
         if(method === 'get'){
-            axios.get('http://localhost:3000/' + url)
+           return axios.get('http://localhost:3000/' + url)
             .then((response)=>{
-                console.log(response);
-                debugger;
                 if(response.status === 200)
                     return response.data
                 else

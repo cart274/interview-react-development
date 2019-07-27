@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Button from '../../components/Button/Button';
 import style from './Login.module.css'
 import request from '../../utils/request'
-import {setLoader} from '../../state/actions'
+import {setLoader, setUser} from '../../state/actions'
 import { connect } from 'react-redux';
 
 class Login extends Component {
@@ -89,7 +89,9 @@ class Login extends Component {
     let {name, lastname, email, age} = this.state,
     data = {name, lastname, email, age};
     await request('post', 'sign_in', data)
+    sessionStorage.setItem('user', JSON.stringify(data));
     this.props.setLoader(false);
+    this.props.setUser(data)
     this.props.history.push(`/products`)
   }
 
@@ -133,7 +135,8 @@ class Login extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  setLoader: (items)=>dispatch(setLoader(items))
+  setLoader: (items)=>dispatch(setLoader(items)),
+  setUser: (items)=>dispatch(setUser(items)),
 })
 
 export default connect(undefined, mapDispatchToProps)(Login);

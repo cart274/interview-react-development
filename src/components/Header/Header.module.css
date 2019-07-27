@@ -3,9 +3,6 @@
 
 .header{
     padding: 0px 5%;
-    background-image: url('../../assets/images/backgrounds/Bg_Header.png');
-    background-size: cover;
-    background-repeat: no-repeat;
     position: sticky;
     top: 0;
 }

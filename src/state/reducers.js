@@ -1,4 +1,4 @@
-import { SET_LOADER, SET_PRODUCTS } from './types';
+import { SET_LOADER, SET_USER, SET_PRODUCTS } from './types';
 
 const itemsReducer = (state, action) => {
   switch (action.type) {
@@ -7,11 +7,16 @@ const itemsReducer = (state, action) => {
         ...state,
         show: action.payload
       }
-    case SET_PRODUCTS:
+    case SET_USER:
       return {
         ...state,
-        products: action.payload
+        user: action.payload
       }
+      case SET_PRODUCTS:
+        return {
+          ...state,
+          products: action.payload
+        }
     default:
       return state;
   }

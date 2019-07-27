@@ -3,18 +3,36 @@ import { Link } from "react-router-dom"
 import styles from "./Header.module.css";
 import logo from "../../assets/images/images/logo_full_color.svg"
 import { Link as LinkScroll } from 'react-scroll'
-
+import { connect } from 'react-redux';
 
 class Header extends Component {
-  render() {
+  constructor(props){
+    super(props)
+    this.state = {
+      lastMenuItem: {
+        text: 'Login',
+        path: '/login'
+      }
+    }
+  }
 
+  render() {
+    let {lastMenuItem = {}} = this.state;
+    let {user} = this.props;
+
+    if(user.hasOwnProperty('name')){
+      lastMenuItem = {
+        text: 'Productos',
+        path: '/products'
+      }
+    }
     return (
       <section className={styles.header}>
         <nav>
           <ul>
             <li>
               <Link to="/">
-                <img src={logo} alt="Logo" />
+                <img src={logo.srch.s} alt="Logo" />
               </Link>
             </li>
             <li>
@@ -38,7 +56,7 @@ class Header extends Component {
               </LinkScroll>
             </li>
             <li>
-              <Link to="/login">Login</Link>
+              <Link to={lastMenuItem.path}> {lastMenuItem.text} </Link>
             </li>
           </ul>
         </nav>
@@ -47,4 +65,8 @@ class Header extends Component {
   }
 }
 
-export default Header;
+const mapStateToProps = state => ({
+  user: state.user
+});
+
+export default connect(mapStateToProps)(Header);

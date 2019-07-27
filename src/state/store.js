@@ -1,6 +1,6 @@
 import { applyMiddleware, createStore } from 'redux';
 import itemsReducer from './reducers'
 
-const store = createStore( itemsReducer, {show: false, products:[]})
+const store = createStore( itemsReducer, {show: false, products:[], user:{}})
 
 export default store;
