@@ -32,7 +32,7 @@ class Header extends Component {
           <ul>
             <li>
               <Link to="/">
-                <img src={logo.srch.s} alt="Logo" />
+                <img src={logo} alt="Logo" />
               </Link>
             </li>
             <li>
