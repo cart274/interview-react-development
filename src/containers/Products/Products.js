@@ -3,6 +3,9 @@ import style from './Products.module.css'
 import request from '../../utils/request'
 import {setProducts} from '../../state/actions'
 import { connect } from 'react-redux';
+import ProductsList from '../../components/ProductList/ProductList'
+import WithLoader from '../../components/WithLoader/WithLoader'
+const ProductsListWithLoader = WithLoader(ProductsList);
 
 class Products extends Component {
 
@@ -10,12 +13,15 @@ class Products extends Component {
     super(props);
 
     this.state = {
-      products: []
+      products: [],
+      loading: false
     }
   }
 
   async componentDidMount(){
+    this.setState({loading: true})
     let products = await request('get','products')
+    this.setState({loading: false})
     this.props.setProducts(products);
     this.setState({products});
   }
@@ -44,20 +50,7 @@ class Products extends Component {
         <div className={style.searchProducts}>
           <input type="text" placeholder="Buscar" onChange={(e) => this.filterProducts(e)}/>
         </div>
-        <section className={style.productsList}>
-          {
-            Array.isArray(products) && products.map( ({ id = 0, sku = '', name = '', price = 0}, key) =>{
-            return <article key={key}>
-                    <img src={ 'http://localhost:3001/images/' + sku + '.jpg'} alt={name}/>
-                    <header>
-                      <h3>({id}) {name}</h3>
-                      <p>Descripción {sku}</p>
-                      <h4>Precio: ${price}</h4>
-                    </header>
-                  </article>
-            })
-          }
-        </section>
+        <ProductsListWithLoader isLoading={this.state.loading} products={this.state.products}></ProductsListWithLoader>
       </section>
     );
   }
