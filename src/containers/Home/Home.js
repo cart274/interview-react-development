@@ -32,18 +32,18 @@ class Home extends Component {
     return (
       <>
         <Element name="welcome">
-          <Welcome></Welcome>
+          <Welcome/>
         </Element>
         <Element name="technologies">
-          <Technologies></Technologies>
+          <Technologies />
         </Element>
         <Element name="benefits">
-          <Benefits></Benefits>
+          <Benefits/>
         </Element>
         <Element name="requirements">
-          <Requirements></Requirements>
+          <Requirements/>
         </Element>
-          <Footer></Footer>
+          <Footer/>
       </>
     );
   }

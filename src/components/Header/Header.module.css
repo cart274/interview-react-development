@@ -36,3 +36,15 @@
     text-align: center;
     font-size: 14px
 }
+.btnLang, .btnLang:active, .btnLang:focus{
+    float: right;
+    margin: -28px -40px 0 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+}
+.btnLang img{
+    width: 25px;
+    height: 16px;
+}

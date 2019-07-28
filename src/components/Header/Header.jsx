@@ -1,24 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom"
 import styles from "./Header.module.css";
-import logo from "../../assets/images/images/logo_full_color.svg"
 import { Link as LinkScroll } from 'react-scroll'
 import { connect } from 'react-redux';
 import { useTranslation } from "react-i18next";
+import logo from "../../assets/images/images/logo_full_color.svg"
+import esflag from "../../assets/images/icons/esflag.jpg"
+import enflag from "../../assets/images/icons/enflag.jpg"
 
 const Header = (props) =>{
   const {t, i18n}= useTranslation();
   let {user} = props;
   let lastMenuItem = {
-    text: t('login'),
+    text: t('Ingresar'),
     path: '/login'
   }
 
   if(user.hasOwnProperty('name')){
     lastMenuItem = {
-      text: t('Products'),
+      text: t('Productos'),
       path: '/products'
     }
+  }
+
+  const changeLanguage = (e)=>{
+    e.preventDefault();
+    if(i18n.language === 'en')
+      i18n.changeLanguage('es');
+    else
+      i18n.changeLanguage('en');
   }
 
   return (
@@ -32,22 +42,22 @@ const Header = (props) =>{
           </li>
           <li>
             <LinkScroll  activeClass="active" to="welcome" spy={true} smooth={true} offset={-100} duration={500} >
-              <Link to="/#welcome">{t('Home')}</Link>
+              <Link to="/#welcome">{t('Inicio')}</Link>
             </LinkScroll>
           </li>
           <li>
             <LinkScroll activeClass="active" to="technologies" spy={true} smooth={true} offset={-80} duration={500} >
-              <Link to="/#technologies">{t('Technologies')}</Link>
+              <Link to="/#technologies">{t('Tecnologías')}</Link>
             </LinkScroll>
           </li>
           <li>
             <LinkScroll activeClass="active" to="benefits" spy={true} smooth={true} offset={-80} duration={500} >
-              <Link to="/#benefits">{t('Benefits')}</Link>
+              <Link to="/#benefits">{t('Beneficios')}</Link>
             </LinkScroll>
           </li>
           <li>
             <LinkScroll activeClass="active" to="requirements" spy={true} smooth={true} offset={-80} duration={500} >
-              <Link to="/#requirements">{t('Requirements')}</Link>
+              <Link to="/#requirements">{t('Requerimientos')}</Link>
             </LinkScroll>
           </li>
           <li>
@@ -55,6 +65,9 @@ const Header = (props) =>{
           </li>
         </ul>
       </nav>
+      <button className={styles.btnLang} onClick={(e)=>{changeLanguage(e)}}>
+        <img  src={i18n.language === 'en' ? esflag :enflag}/>
+      </button>
     </section>
   );
 }
