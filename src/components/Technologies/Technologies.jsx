@@ -11,7 +11,7 @@ const Technologies = ()=>{
   return (
     <section className={techStyle.technologies}>
       <div className={techStyle.techText}>
-        <h2>{t('Estamos buscando para incorporar gente increíble para estas tecnologías:')}</h2>
+        <h2>{t('Estamos buscando para incorporar gente increíble para estas tecnologías')}:</h2>
       </div>
       <div className={techStyle.techIcons}>
         <img src={icons} alt="Technologies" />
@@ -19,13 +19,13 @@ const Technologies = ()=>{
       <div className={techStyle.woloxers}>
         <h2>350 + <span>Woloxers</span></h2>
         <div className={techStyle.twitter}>@Wolox</div>
-        <Button text="Siguenos" btnType="secondary"></Button>
+        <Button text={t('Siguenos')} btnType="secondary"></Button>
       </div>
       <div className={techStyle.followText}>
-        <h2>Trabajamos para 
-          <strong> convertir</strong>
-          <span> ideas </span>
-          en productos.
+        <h2>{t('Trabajamos para')} 
+          <strong> {t('convertir')}</strong>
+          <span>  {t('ideas')} </span>
+            {t('en productos')}.
         </h2>
       </div>
     </section>

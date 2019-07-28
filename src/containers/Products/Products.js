@@ -46,7 +46,7 @@ class Products extends Component {
     let {products, loading} = this.state;
     return (
       <section className={style.products}>
-        <h1>Products</h1>
+        <h1>Productos</h1>
         <div className={style.searchProducts}>
           <input type="text" placeholder="Buscar" onChange={(e) => this.filterProducts(e)}/>
         </div>
