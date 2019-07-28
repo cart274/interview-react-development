@@ -43,14 +43,14 @@ class Products extends Component {
   }
 
   render() {
-    let {products} = this.state;
+    let {products, loading} = this.state;
     return (
       <section className={style.products}>
         <h1>Products</h1>
         <div className={style.searchProducts}>
           <input type="text" placeholder="Buscar" onChange={(e) => this.filterProducts(e)}/>
         </div>
-        <ProductsListWithLoader isLoading={this.state.loading} products={this.state.products}></ProductsListWithLoader>
+        <ProductsListWithLoader isLoading={loading} products={products}></ProductsListWithLoader>
       </section>
     );
   }

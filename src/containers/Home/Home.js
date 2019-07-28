@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Home.module.css';
-import '../../assets/styles/main.css'
 import Technologies from '../../components/Technologies/Technologies'
 import Benefits from '../../components/Benefits/Benefits';
 import Requirements from '../../components/Requirements/Requirements';

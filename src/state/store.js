@@ -1,4 +1,4 @@
-import { applyMiddleware, createStore } from 'redux';
+import { createStore } from 'redux';
 import itemsReducer from './reducers'
 
 const store = createStore( itemsReducer, {show: false, products:[], user:{}})

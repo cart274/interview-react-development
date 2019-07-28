@@ -3,11 +3,12 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { connect } from 'react-redux';
 import {setUser} from '../../state/actions';
 import Loader from '../../components/Loader/Loader';
+import '../../assets/styles/main.css'
 import i18n from '../../utils/i18n'
-const Header = lazy(() => import('../../components/Header/Header.js'));
-const Home = lazy(() => import('../Home/Home.js'));
-const Login = lazy(() => import('../Login/Login.js'));
-const Products = lazy(() => import('../Products/Products.js'));
+const Header = lazy(() => import('../../components/Header/Header'));
+const Home = lazy(() => import('../Home/Home'));
+const Login = lazy(() => import('../Login/Login'));
+const Products = lazy(() => import('../Products/Products'));
 
 class App extends Component {
 
