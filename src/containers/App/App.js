@@ -1,9 +1,10 @@
 import React, { Component, lazy, Suspense  } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom"
-import Header from '../../components/Header/Header.js'
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { connect } from 'react-redux';
-import {setUser} from '../../state/actions'
-import Loader from '../../components/Loader/Loader'
+import {setUser} from '../../state/actions';
+import Loader from '../../components/Loader/Loader';
+import i18n from '../../utils/i18n'
+const Header = lazy(() => import('../../components/Header/Header.js'));
 const Home = lazy(() => import('../Home/Home.js'));
 const Login = lazy(() => import('../Login/Login.js'));
 const Products = lazy(() => import('../Products/Products.js'));
@@ -26,10 +27,11 @@ class App extends Component {
   }
 
   render() {
+    let WaitingForHeader = this.WaitingComponent(Header);
     return (
       <>
         <Router>
-          <Header></Header>          
+          <WaitingForHeader></WaitingForHeader>
           <Route path="/" exact component={this.WaitingComponent(Home)} />
           <Route path="/login/" component={this.WaitingComponent(Login)} />
           <Route path="/products/" component={this.WaitingComponent(Products)} />
