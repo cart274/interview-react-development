@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Home.module.css';
+import Header from '../../components/Header/Header';
 import Technologies from '../../components/Technologies/Technologies'
 import Benefits from '../../components/Benefits/Benefits';
 import Requirements from '../../components/Requirements/Requirements';
@@ -9,15 +10,14 @@ import { Element , Events, scrollSpy } from 'react-scroll'
 
 
 class Home extends Component {
-  
+  constructor(props){
+    super(props);
+  }
   componentDidMount() {
-
     Events.scrollEvent.register('begin', function(to, element) {
-      console.log("begin", arguments);
     });
 
     Events.scrollEvent.register('end', function(to, element) {
-      console.log("end", arguments);
     });
 
     scrollSpy.update();
@@ -31,6 +31,7 @@ class Home extends Component {
   render() {
     return (
       <>
+        <Header useScroll={true}></Header>
         <Element name="welcome">
           <Welcome/>
         </Element>

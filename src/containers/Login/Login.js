@@ -3,6 +3,7 @@ import style from './Login.module.css'
 import request from '../../utils/request'
 import { setUser} from '../../state/actions'
 import { connect } from 'react-redux';
+import Header from '../../components/Header/Header';
 import WithLoader from '../../components/WithLoader/WithLoader'
 import LoginForm from '../../components/LoginForm/LoginForm'
 
@@ -30,10 +31,13 @@ class Login extends Component {
 
   render() {
     return (
-      <section className={style.login}>
-        <h1>Login</h1>
-        <LoginFormWithLoader  isLoading={this.state.loading} send={(data)=> this.send(data)} ></LoginFormWithLoader>
-      </section>
+      <>
+        <Header useScroll={false}></Header>
+        <section className={style.login}>
+          <h1>Login</h1>
+          <LoginFormWithLoader history={this.props.history} isLoading={this.state.loading} send={(data)=> this.send(data)} ></LoginFormWithLoader>
+        </section>
+      </>
     );
   }
 }

@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import {setUser} from '../../state/actions';
 import Loader from '../../components/Loader/Loader';
 import '../../assets/styles/main.css'
-const Header = lazy(() => import('../../components/Header/Header'));
 const Home = lazy(() => import('../Home/Home'));
 const Login = lazy(() => import('../Login/Login'));
 const Products = lazy(() => import('../Products/Products'));
@@ -27,11 +26,9 @@ class App extends Component {
   }
 
   render() {
-    let WaitingForHeader = this.WaitingComponent(Header);
     return (
       <>
         <Router>
-          <WaitingForHeader></WaitingForHeader>
           <Route path="/" exact component={this.WaitingComponent(Home)} />
           <Route path="/login/" component={this.WaitingComponent(Login)} />
           <Route path="/products/" component={this.WaitingComponent(Products)} />

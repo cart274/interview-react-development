@@ -66,7 +66,7 @@ const Header = (props) =>{
         </ul>
       </nav>
       <button className={styles.btnLang} onClick={(e)=>{changeLanguage(e)}}>
-        <img  src={i18n.language === 'en' ? esflag :enflag}/>
+        <img  src={i18n.language === 'en' ? esflag :enflag} alt="language"/>
       </button>
     </section>
   );

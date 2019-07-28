@@ -3,6 +3,7 @@ import style from './Products.module.css'
 import request from '../../utils/request'
 import {setProducts} from '../../state/actions'
 import { connect } from 'react-redux';
+import Header from '../../components/Header/Header';
 import ProductsList from '../../components/ProductList/ProductList'
 import WithLoader from '../../components/WithLoader/WithLoader'
 const ProductsListWithLoader = WithLoader(ProductsList);
@@ -45,13 +46,16 @@ class Products extends Component {
   render() {
     let {products, loading} = this.state;
     return (
-      <section className={style.products}>
-        <h1>Productos</h1>
-        <div className={style.searchProducts}>
-          <input type="text" placeholder="Buscar" onChange={(e) => this.filterProducts(e)}/>
-        </div>
-        <ProductsListWithLoader isLoading={loading} products={products}></ProductsListWithLoader>
-      </section>
+      <>
+        <Header useScroll={false}></Header>
+        <section className={style.products}>
+          <h1>Productos</h1>
+          <div className={style.searchProducts}>
+            <input type="text" placeholder="Buscar" onChange={(e) => this.filterProducts(e)}/>
+          </div>
+          <ProductsListWithLoader isLoading={loading} products={products}></ProductsListWithLoader>
+        </section>
+      </>
     );
   }
 }
