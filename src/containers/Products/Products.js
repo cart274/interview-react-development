@@ -12,7 +12,9 @@ class Products extends Component {
 
   constructor(props){
     super(props);
-
+    if(!props.user.hasOwnProperty('email')){
+      props.history.push('/login')
+    }
     this.state = {
       products: [],
       loading: false
@@ -61,7 +63,8 @@ class Products extends Component {
 }
 
 const mapStateToProps = state => ({
-  products: state.products
+  products: state.products,
+  user: state.user
 });
 
 const mapDispatchToProps = dispatch => ({

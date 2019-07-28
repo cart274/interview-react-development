@@ -10,9 +10,7 @@ import { Element , Events, scrollSpy } from 'react-scroll'
 
 
 class Home extends Component {
-  constructor(props){
-    super(props);
-  }
+
   componentDidMount() {
     Events.scrollEvent.register('begin', function(to, element) {
     });

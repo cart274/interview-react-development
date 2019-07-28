@@ -14,19 +14,20 @@ const request = async ( method, path, data) =>{
         const url = 'https://json-server-now.cart274.now.sh/';
         if(method === 'post'){
             axios.post(url + path, data)
+            .then((response)=>{
+                return response.data                
+            }).catch((error) =>console.log(error))
         }
 
         if(method === 'get'){
            return axios.get(url + path)
             .then((response)=>{
-                if(response.status === 200)
-                    return response.data
-                else
-                    return {};
-            })
+                return response.data                
+            }).catch((error) =>console.log(error))
         }
     }catch(error){
         console.log(error);
+        return null;
     }
 }
 export default request;
