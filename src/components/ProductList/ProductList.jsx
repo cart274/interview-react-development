@@ -10,7 +10,7 @@ const ProductList = (props) =>{
     {
       Array.isArray(props.products) && props.products.map( ({ id = 0, sku = '', name = '', price = 0}, key) =>{
       return <article key={key}>
-              <img src={ '/products/' + sku + '.jpg'} alt={name}/>
+              <img src={ require('../../assets/images/products/' + sku + '.jpg')} alt={name}/>
               <header>
                 <h3>({id}) {name}</h3>
                 <p>{t('Descripción')} {sku}</p>
