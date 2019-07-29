@@ -1,12 +1,4 @@
-import { SET_LOADER, SET_USER, SET_PRODUCTS } from './types';
-
-//Action Creator: funcion que devuelve un objeto "action"
-export const setLoader = (show = false)=>{
-  return{
-    type: SET_LOADER,
-    payload: show
-  }
-}
+import { SET_USER, SET_PRODUCTS } from './types';
 
 export const setUser = (user = {})=>{
   return{
@@ -21,10 +13,3 @@ export const setProducts = (products = [])=>{
     payload: products    
   }
 }
-//Esta funcion es capturada por Thunk, se ejecuta y luego llama a una action creator
-/*export const getResultsItems = (q) => dispatch => {
-  mlData.find(q).then(results=>{
-    dispatch(setItems(results));
-  })
-}
-*/

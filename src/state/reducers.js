@@ -1,12 +1,7 @@
-import { SET_LOADER, SET_USER, SET_PRODUCTS } from './types';
+import { SET_USER, SET_PRODUCTS } from './types';
 
 const itemsReducer = (state, action) => {
   switch (action.type) {
-    case SET_LOADER:
-      return {
-        ...state,
-        show: action.payload
-      }
     case SET_USER:
       return {
         ...state,

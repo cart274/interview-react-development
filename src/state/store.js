@@ -1,6 +1,6 @@
 import { createStore } from 'redux';
 import itemsReducer from './reducers'
 
-const store = createStore( itemsReducer, {show: false, products:[], user:{}})
+const store = createStore( itemsReducer, { products:[], user:{}})
 
 export default store;
