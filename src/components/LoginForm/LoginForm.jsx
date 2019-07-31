@@ -24,11 +24,11 @@ const LoginForm = (props)=>{
     const inputChange = async (e)=>{
         setData({
             ...data,
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.type === 'checkbox' ? e.target.checked : e.target.value
           })
         validate({
             ...data,
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.type === 'checkbox' ? e.target.checked : e.target.value
           });
     } 
 
@@ -39,7 +39,7 @@ const LoginForm = (props)=>{
             validated = true;
         }
         if(isValid !== validated)
-          setValid(true);
+          setValid(validated);
     }
     
     const validateEmail = (email)=>{
