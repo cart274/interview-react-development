@@ -11,9 +11,9 @@
     width: 50%;
 }
 .requirements div h2{
-    font-size: 30px;
+    font-size: 3rem;
     max-width: 360px;
-    font-size: 32px;
+    font-size: 3.4rem;
     font-weight: 800;
     margin-left: 40px;
 }
@@ -25,9 +25,8 @@
     flex-direction: column;
 }
 .requirements div ul li{
-    font-size: 30px;
     max-width: 560px;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 600;
     padding: 0 0 40px 50px;
     position: relative;

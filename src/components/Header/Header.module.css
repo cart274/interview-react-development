@@ -1,10 +1,12 @@
 @value colors: "../../assets/styles/variables.css";
-@value black, cerulean, atlantis from colors;
+@value black, cerulean, atlantis, white from colors;
 
 .header{
-    padding: 0px 5%;
+    padding: 0px 5% 5px;
     position: sticky;
     top: 0;
+    background-color: white;
+    z-index: 999;
 }
 .header nav{
    
@@ -23,7 +25,7 @@
 .header ul li a{
     color: black;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 600
 }
 .header ul li:last-child a{
@@ -34,7 +36,7 @@
     width: 13vw;
     display: block;
     text-align: center;
-    font-size: 14px
+    font-size: 1.4rem
 }
 .btnLang, .btnLang:active, .btnLang:focus{
     float: right;

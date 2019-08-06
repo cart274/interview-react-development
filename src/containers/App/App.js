@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import {setUser} from '../../state/actions';
 import Loader from '../../components/Loader/Loader';
 import '../../assets/styles/main.css'
+import '../../assets/styles/mobile.css'
 const Home = lazy(() => import('../Home/Home'));
 const Login = lazy(() => import('../Login/Login'));
 const Products = lazy(() => import('../Products/Products'));

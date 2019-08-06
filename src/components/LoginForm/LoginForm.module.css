@@ -16,7 +16,7 @@
 .leftLogin label{
     display: block;
     padding: 30px 0 20px;
-    font-size: 24px;
+    font-size: 2.4rem;
     width: 200px;
     text-align: left;
     font-weight: 500
@@ -24,7 +24,7 @@
 }
 .leftLogin input, .rightLogin input{
     width: 200px;
-    font-size: 20px;
+    font-size: 2rem;
     border-radius: 5px;
     border: 1px solid cerulean;
     padding: 5px;
@@ -38,12 +38,12 @@
 .rightLogin label{
     display: block;
     padding: 30px 0 20px;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 500
 }
 .rightLogin select{
     width: 200px;
-    font-size: 20px;
+    font-size: 2rem;
     border-radius: 5px;
     border: 1px solid cerulean;
     padding: 5px;
@@ -53,7 +53,7 @@
     padding: 60px 0;
     width: 100%;
     text-align: center;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 .termsLogin span{
     color: cerulean;

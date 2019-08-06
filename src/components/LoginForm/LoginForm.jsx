@@ -53,11 +53,11 @@ const LoginForm = (props)=>{
                 <label for="name">{t('Nombre')}</label>
                 <input type="text" placeholder={t('Nombre')} id="name" value={data.name} name="name" onChange={ inputChange}/>
                 <label for="email">{t('Correo')}</label>
-                <input type="mail" placeholder={t('Nombre')} id="email" value={data.email} name="email" onChange={(e)=> inputChange(e)}/>
+                <input type="mail" placeholder={t('Correo')} id="email" value={data.email} name="email" onChange={(e)=> inputChange(e)}/>
             </div>
             <div className={style.rightLogin}>
                 <label for="lastname">{t('Apellido')}</label>
-                <input type="text"  placeholder="Apellido" id="lastname" value={data.lastname} name="lastname" onChange={(e)=> inputChange(e)}/>
+                <input type="text"  placeholder={t('Apellido')} id="lastname" value={data.lastname} name="lastname" onChange={(e)=> inputChange(e)}/>
                 <label for="age">{t('Edad')}</label>
                 <select id="age" onChange={(e)=> inputChange(e)} name="age" value={data.age}>
                 {
