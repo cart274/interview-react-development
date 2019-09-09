@@ -1,37 +1,30 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import style from './Products.module.css'
 import request from '../../utils/request'
-import {setProducts} from '../../state/actions'
+import {setProducts} from './actions'
 import { connect } from 'react-redux';
 import Header from '../../components/Header/Header';
 import ProductsList from '../../components/ProductList/ProductList'
 import WithLoader from '../../components/WithLoader/WithLoader'
 const ProductsListWithLoader = WithLoader(ProductsList);
 
-class Products extends Component {
+const Products = async (props) => {
 
-  constructor(props){
-    super(props);
-    if(!props.user.hasOwnProperty('email')){
-      props.history.push('/login')
-    }
-    this.state = {
-      products: [],
-      loading: false
-    }
+  const [products, setProductsState] = useState( [] );
+  const [loading, setLoadingState] = useState( true );
+
+  if(!props.user.hasOwnProperty('email')){
+    props.history.push('/login')
   }
+  
+  let productRequest = await request('get','products')
+  setProductsState(productRequest);
+  setLoadingState(false)
+  props.setProducts(productRequest);  
 
-  async componentDidMount(){
-    this.setState({loading: true})
-    let products = await request('get','products')
-    this.setState({loading: false})
-    this.props.setProducts(products);
-    this.setState({products});
-  }
-
-  filterProducts(e){
+  const filterProducts = (e) =>{
     let { value = ''} = e.target,
-        {products} = this.props;
+        {products} = props;
 
     let productsFiltered = products.filter(product=> {
       let filter = true;
@@ -42,24 +35,22 @@ class Products extends Component {
       return filter;
     })
 
-    this.setState({products:productsFiltered});
+    setProductsState({products:productsFiltered});
   }
 
-  render() {
-    let {products, loading} = this.state;
     return (
       <>
         <Header useScroll={false}></Header>
         <section className={style.products}>
           <h1>Productos</h1>
           <div className={style.searchProducts}>
-            <input type="text" placeholder="Buscar" onChange={(e) => this.filterProducts(e)}/>
+            <input type="text" placeholder="Buscar" onChange={(e) => filterProducts(e)}/>
           </div>
           <ProductsListWithLoader isLoading={loading} products={products}></ProductsListWithLoader>
         </section>
       </>
     );
-  }
+  
 }
 
 const mapStateToProps = state => ({

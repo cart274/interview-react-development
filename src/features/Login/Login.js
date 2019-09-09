@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import style from './Login.module.css'
 import request from '../../utils/request'
-import { setUser} from '../../state/actions'
+import { setUser} from './actions'
 import { connect } from 'react-redux';
 import Header from '../../components/Header/Header';
 import WithLoader from '../../components/WithLoader/WithLoader'

@@ -1,0 +1,76 @@
+/*Ipad Pro landscape*/
+@media (min-width: 1360px) and (min-height: 1000px) and (orientation: landscape) {
+
+}
+
+@media (max-width: 1440px) and (max-height: 800px) and (orientation: landscape) {
+
+}
+
+/*Ipad landscape*/
+@media (max-width: 1025px) and (max-height: 769px) and (orientation: landscape) {
+
+}
+
+/*Iphone X*/
+@media (max-width: 824px) and (max-height: 441px) and (orientation: landscape) {
+
+}
+
+/*Android nexus5*/
+@media (max-width: 780px) and (max-height: 440px) and (orientation: landscape) {
+
+}
+
+/*Iphone 6 plus landscape*/
+@media (max-width: 737px) and (max-height: 414px) and (orientation: landscape) {
+
+}
+/*Iphone 6 plus landscape*/
+@media (max-width: 668px) and (max-height: 375px) and (orientation: landscape) {
+
+}
+
+/*Android phone landscape*/
+@media (max-width: 641px) and (max-height: 361px) and (orientation: landscape) {
+
+}
+/*Iphone 5/5s landscape*/
+@media (max-width: 569px) and (max-height: 320px) and (orientation: landscape) {
+
+}
+
+/*************************************************************************************************/
+
+/*Ipad Pro Portrait*/
+@media (max-width: 1025px) and (min-height: 1300px) and (orientation: portrait) {
+
+}
+/*Android tablet portrait*/
+@media (max-width: 801px) and (orientation: portrait) {
+
+}
+/*Ipad portrait*/
+@media (max-width: 769px) and (orientation: portrait) {
+
+}
+
+@media (max-width: 601px) and (orientation: portrait) {
+	
+}
+
+/*Iphone 6 plus portrait*/
+@media (max-width: 415px) and (orientation: portrait) {
+
+}
+
+
+/*Iphone 6 plus portrait*//*Android phone portrait 361*/
+@media (max-width: 376px)  and (orientation: portrait) {
+
+}
+
+/*Iphone 5/5s portrait*/
+@media (max-width: 321px) and (orientation: portrait) {
+
+}
